@@ -4,25 +4,32 @@
 		<link rel='stylesheet' type='text/css' href='style.css'>
 	</head>
 	<body>
-		<canvas id='canvasArea'>
-		</canvas>
+		<div id='canvasArea'>
+			<canvas id='canvas'>
+			</canvas>
+		</div>
 		<script>
-			let canvas = document.getElementById('canvasArea')
+			let canvas = document.getElementById('canvas')
 			let context = canvas.getContext('2d')
-			
+
 			context.save()
-			
+
 			context.strokeStyle = '#000'
-			context.lineWidth = '1.00000';
-			
+
 			context.beginPath()
 
-			context.moveTo(20, 20)
-			context.lineTo(20, 45)
-			context.moveTo(20, 45)
-			context.rotate(90*Math.PI/180)
-			context.lineTo(20, 90)
-			
+			context.moveTo(100, 100)
+			context.lineTo(90, 140)
+			context.moveTo(100, 100)
+			context.lineTo(110, 140)
+			context.lineTo(120, 140)
+			context.lineTo(120, 145)
+			context.lineTo(80, 145)
+			context.lineTo(80, 140)
+			context.lineTo(90, 140)
+			//context.lineTo()
+			//context.rotate(90*Math.PI/180)
+
 			context.closePath()
 			context.stroke()
 		</script>
