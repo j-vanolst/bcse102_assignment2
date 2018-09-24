@@ -223,7 +223,14 @@ State.prototype.update = function(time, keys) {
 
   let player = newState.player;
   if (this.level.touches(player.pos, player.size, "lava")) {
+    countdown.stopCountdown()
+    countdown.setCountdown(180)
     return new State(this.level, actors, "lost");
+  }
+
+  if (countdown.finished == true) {
+    countdown.setCountdown(180)
+    return new State(this.level, actors, "lost")
   }
 
   for (let actor of actors) {
@@ -242,6 +249,8 @@ function overlap(actor1, actor2) {
 }
 
 Lava.prototype.collide = function(state) {
+  countdown.stopCountdown()
+  countdown.setCountdown(180)
   return new State(state.level, state.actors, "lost");
 };
 
@@ -327,7 +336,7 @@ function runAnimation(frameFunc) {
   requestAnimationFrame(frame);
 }
 
-function runLevel(level, Display) {
+function runLevel(level, Display, countdown) {
   let display = new Display(document.body, level);
   let state = State.start(level);
   let ending = 1;
@@ -349,10 +358,11 @@ function runLevel(level, Display) {
   });
 }
 
-async function runGame(plans, Display) {
+async function runGame(plans, Display, countdown) {
+  countdown.startCountdown()
   for (let level = 0; level < plans.length;) {
     let status = await runLevel(new Level(plans[level]),
-                                Display);
+                                Display, countdown);
     if (status == "won") level++;
   }
   console.log("You've won!");
