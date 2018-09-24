@@ -110,7 +110,7 @@ var Coin = class Coin {
   }
 }
 
-Coin.prototype.size = new Vec(0.6, 0.6);
+Coin.prototype.size = new Vec(1, 1.2);
 
 var levelChars = {
   ".": "empty", "#": "wall", "+": "lava",
@@ -223,12 +223,13 @@ State.prototype.update = function(time, keys) {
 
   let player = newState.player;
   if (this.level.touches(player.pos, player.size, "lava")) {
-    countdown.stopCountdown()
+    score.setCount(0)
     countdown.setCountdown(180)
     return new State(this.level, actors, "lost");
   }
 
   if (countdown.finished == true) {
+    score.setCount(0)
     countdown.setCountdown(180)
     return new State(this.level, actors, "lost")
   }
@@ -249,7 +250,7 @@ function overlap(actor1, actor2) {
 }
 
 Lava.prototype.collide = function(state) {
-  countdown.stopCountdown()
+  score.setCount(0)
   countdown.setCountdown(180)
   return new State(state.level, state.actors, "lost");
 };
@@ -257,6 +258,7 @@ Lava.prototype.collide = function(state) {
 Coin.prototype.collide = function(state) {
   let filtered = state.actors.filter(a => a != this);
   let status = state.status;
+  score.incCount()
   if (!filtered.some(a => a.type == "coin")) status = "won";
   return new State(state.level, filtered, status);
 };
@@ -281,7 +283,7 @@ Coin.prototype.update = function(time) {
                   this.basePos, wobble);
 };
 
-var playerXSpeed = 7;
+var playerXSpeed = 10;
 var gravity = 30;
 var jumpSpeed = 17;
 
@@ -352,6 +354,7 @@ function runLevel(level, Display, countdown) {
       } else {
         display.clear();
         resolve(state.status);
+        countdown.setCountdown(180)
         return false;
       }
     });
@@ -359,7 +362,6 @@ function runLevel(level, Display, countdown) {
 }
 
 async function runGame(plans, Display, countdown) {
-  countdown.startCountdown()
   for (let level = 0; level < plans.length;) {
     let status = await runLevel(new Level(plans[level]),
                                 Display, countdown);

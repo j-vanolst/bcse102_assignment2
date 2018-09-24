@@ -125,6 +125,9 @@ CanvasDisplay.prototype.drawPlayer = function(player, x, y,
   this.cx.restore();
 };
 
+var roadconeSprite = document.createElement("img")
+roadconeSprite.src = "img/roadcone.png"
+
 CanvasDisplay.prototype.drawActors = function(actors) {
   for (let actor of actors) {
     let width = actor.size.x * scale;
@@ -134,10 +137,10 @@ CanvasDisplay.prototype.drawActors = function(actors) {
     if (actor.type == "player") {
       this.drawPlayer(actor, x, y, width, height);
     } else {
-      let tileX = (actor.type == "coin" ? 2 : 1) * scale;
-      this.cx.drawImage(otherSprites,
-                        tileX, 0, width, height,
-                        x,     y, width, height);
+      let tileX = (actor.type == "coin" ? 0 : 1) * scale;
+      this.cx.drawImage(roadconeSprite,
+                        tileX, 1, 20, 31,
+                        x,     y, 20, 31);
     }
   }
 };
