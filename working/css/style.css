@@ -2,10 +2,16 @@
   padding: 0;
   margin: 0;
 }
+body {
+  background-image: url('../img/background.png')
+}
 canvas {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border-width: 4px;
+  border-color: #000;
+  border-style: solid;
 }
 h1 {
   font-family: sans-serif;
@@ -13,8 +19,12 @@ h1 {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 20px;
+  color: yellow;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 h2 {
   font-family: sans-serif;
   padding-left: 50px;
+  color: yellow;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }

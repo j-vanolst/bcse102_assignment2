@@ -98,11 +98,11 @@ CanvasDisplay.prototype.drawBackground = function(level) {
 
 var playerSprites = document.createElement("img");
 playerSprites.src = "img/player.png";
-var playerXOverlap = 4;
+var playerXOverlap = 10;
 
 CanvasDisplay.prototype.drawPlayer = function(player, x, y,
                                               width, height){
-  width += playerXOverlap * 15;
+  width += playerXOverlap * 2;
   x -= playerXOverlap;
   if (player.speed.x != 0) {
     this.flipPlayer = player.speed.x < 0;
@@ -110,9 +110,9 @@ CanvasDisplay.prototype.drawPlayer = function(player, x, y,
 
   let tile = 0;
   if (player.speed.y != 0) {
-    tile = 5;
+    tile = 2;
   } else if (player.speed.x != 0) {
-    tile = Math.floor(Date.now() / 60) % 8;
+    tile = Math.floor(Date.now() / 60) % 2;
   }
 
   this.cx.save();

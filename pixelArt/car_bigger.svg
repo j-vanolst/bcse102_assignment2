@@ -9,13 +9,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="242"
-   height="32"
-   viewBox="0 0 64.029166 8.4666669"
+   width="362"
+   height="48"
+   viewBox="0 0 95.779166 12.7"
    version="1.1"
    id="svg3719"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="car.svg"
+   sodipodi:docname="car_bigger.svg"
    inkscape:export-filename="C:\Users\Jos\Documents\GitHub\bcse102_assignment2\pixelArt\player.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313709"
-     inkscape:cx="176.72769"
-     inkscape:cy="15.551991"
+     inkscape:zoom="16.000001"
+     inkscape:cx="276.60098"
+     inkscape:cy="22.979779"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -60,37 +60,33 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(0,-288.53332)"
+     transform="translate(0,-284.29999)"
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
     <path
-       style="fill:#8d0505;fill-opacity:1;stroke:none;stroke-width:0.015625;stroke-opacity:1"
+       style="fill:#8d0505;fill-opacity:1;stroke:none;stroke-width:0.00618801;stroke-opacity:1"
        d=""
        id="path5356"
-       inkscape:connector-curvature="0"
-       transform="matrix(0.26458333,0,0,0.26458333,0,289.59165)" />
+       inkscape:connector-curvature="0" />
     <path
-       style="fill:#8d0505;fill-opacity:1;stroke:none;stroke-width:0.015625;stroke-opacity:1"
+       style="fill:#8d0505;fill-opacity:1;stroke:none;stroke-width:0.00618801;stroke-opacity:1"
        d=""
        id="path5362"
-       inkscape:connector-curvature="0"
-       transform="matrix(0.26458333,0,0,0.26458333,0,289.59165)" />
+       inkscape:connector-curvature="0" />
     <path
-       style="fill:#8d0505;fill-opacity:1;stroke:none;stroke-width:0.015625;stroke-opacity:1"
+       style="fill:#8d0505;fill-opacity:1;stroke:none;stroke-width:0.00618801;stroke-opacity:1"
        d=""
        id="path5364"
-       inkscape:connector-curvature="0"
-       transform="matrix(0.26458333,0,0,0.26458333,0,289.59165)" />
+       inkscape:connector-curvature="0" />
     <path
-       style="fill:#8d0505;fill-opacity:1;stroke:none;stroke-width:0.015625;stroke-opacity:1"
+       style="fill:#8d0505;fill-opacity:1;stroke:none;stroke-width:0.00618801;stroke-opacity:1"
        d=""
        id="path5390"
-       inkscape:connector-curvature="0"
-       transform="matrix(0.26458333,0,0,0.26458333,0,289.59165)" />
+       inkscape:connector-curvature="0" />
     <g
        id="g3119"
-       transform="matrix(-1,0,0,1,42.06875,0)">
+       transform="matrix(-1.4968162,0,0,1.4968162,62.837736,-147.5544)">
       <path
          inkscape:export-ydpi="96"
          inkscape:export-xdpi="96"
@@ -2445,7 +2441,7 @@
     </g>
     <g
        id="g2618"
-       transform="matrix(-1,0,0,1,40.497669,0.0071304)">
+       transform="matrix(-1.4968162,0,0,1.4968162,60.486117,-147.54373)">
       <path
          inkscape:export-ydpi="96"
          inkscape:export-xdpi="96"
@@ -4920,7 +4916,7 @@
     </g>
     <g
        id="g7209"
-       transform="translate(-3.5603841e-6,-1.0583487)">
+       transform="matrix(1.4968162,0,0,1.4968162,-0.13145476,-149.13856)">
       <path
          inkscape:export-ydpi="96"
          inkscape:export-xdpi="96"
@@ -6964,7 +6960,7 @@
     </g>
     <g
        id="g4810"
-       transform="matrix(0.8200941,0,0,1.0125074,44.359742,-3.714697)">
+       transform="matrix(1.2275301,0,0,1.5155375,66.26693,-153.11462)">
       <g
          id="g4775">
         <g
@@ -7239,7 +7235,7 @@
     </g>
     <g
        id="g4810-0"
-       transform="matrix(0.82009409,0,0,1.0125074,56.265991,-3.714697)">
+       transform="matrix(1.2275301,0,0,1.5155375,84.088396,-153.11462)">
       <g
          id="g4775-8">
         <g
@@ -7513,48 +7509,40 @@
       </g>
     </g>
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
-       id="rect7211"
-       width="1.8537443"
-       height="0.49219668"
-       x="47.360416"
-       y="293.03125"
-       ry="0.11024315" />
-    <rect
-       style="fill:#3a3a3a;fill-opacity:1;stroke:none;stroke-width:0.37417969;stroke-opacity:1"
+       style="fill:#3a3a3a;fill-opacity:1;stroke:none;stroke-width:0.5600782;stroke-opacity:1"
        id="rect7225"
-       width="0.26458332"
-       height="1.0583466"
-       x="47.625"
-       y="292.50208"
-       rx="0.0016609192"
-       ry="0.22048908" />
+       width="0.3960326"
+       height="1.5841503"
+       x="71.154419"
+       y="290.26743"
+       rx="0.0024860906"
+       ry="0.33003163" />
     <rect
-       style="fill:#3a3a3a;fill-opacity:1;stroke:none;stroke-width:0.3741743;stroke-opacity:1"
+       style="fill:#3a3a3a;fill-opacity:1;stroke:none;stroke-width:0.56007016;stroke-opacity:1"
        id="rect7225-0"
-       width="0.26458332"
-       height="1.0583161"
-       x="48.683334"
-       y="292.50208"
-       rx="0.0016609192"
-       ry="0.22048272" />
+       width="0.3960326"
+       height="1.5841047"
+       x="72.738556"
+       y="290.26743"
+       rx="0.0024860906"
+       ry="0.3300221" />
     <rect
-       style="fill:#3a3a3a;fill-opacity:1;stroke:none;stroke-width:0.3741743;stroke-opacity:1"
+       style="fill:#3a3a3a;fill-opacity:1;stroke:none;stroke-width:0.56007016;stroke-opacity:1"
        id="rect7225-8"
-       width="0.26458332"
-       height="1.0583161"
-       x="59.53125"
-       y="292.50208"
-       rx="0.0016609192"
-       ry="0.22048272" />
+       width="0.3960326"
+       height="1.5841047"
+       x="88.975891"
+       y="290.26743"
+       rx="0.0024860906"
+       ry="0.3300221" />
     <rect
-       style="fill:#3a3a3a;fill-opacity:1;stroke:none;stroke-width:0.37417969;stroke-opacity:1"
+       style="fill:#3a3a3a;fill-opacity:1;stroke:none;stroke-width:0.5600782;stroke-opacity:1"
        id="rect7225-7"
-       width="0.26458332"
-       height="1.0583466"
-       x="60.589584"
-       y="292.50208"
-       rx="0.0016609192"
-       ry="0.22048908" />
+       width="0.3960326"
+       height="1.5841503"
+       x="90.56002"
+       y="290.26743"
+       rx="0.0024860906"
+       ry="0.33003163" />
   </g>
 </svg>
