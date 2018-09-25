@@ -10,15 +10,15 @@
   </head>
   <body>
     <h1>Roadcone Rampage</h1>
-    <script>
-      var countdown = new Countdown()
-      runGame(GAME_LEVELS, CanvasDisplay, countdown);
-    </script>
+    <div id='game'>
+    </div>
     <div id='gameInformation'>
       <h2 id='score'>Score: 0</h2>
       <h2 id='countdown'>Time Remaining: 180 seconds</h2>
     </div>
     <script>
+      var countdown = new Countdown()
+      runGame(GAME_LEVELS, CanvasDisplay, countdown);
       scoreElement = document.getElementById('score')
       var score = new Counter(scoreElement, 'Score: ')
     </script>

@@ -16,7 +16,9 @@ var CanvasDisplay = class CanvasDisplay {
     this.canvas = document.createElement("canvas");
     this.canvas.width = Math.min(800, level.width * scale);
     this.canvas.height = Math.min(600, level.height * scale);
-    parent.appendChild(this.canvas);
+    //parent.appendChild(this.canvas);
+    let gameDiv = document.getElementById('game')
+    gameDiv.appendChild(this.canvas)
     this.cx = this.canvas.getContext("2d");
 
     this.flipPlayer = false;
