@@ -137,6 +137,11 @@ conWorker.prototype.update = function(time, state) {
     return new conWorker(this.pos, this.speed.times(-1));
   }
 };
+conWorker.prototype.collide = function(state) {
+  score.setCount(0)
+  countdown.setCountdown(180)
+  return new State(state.level, state.actors, "lost");
+};
 //CONSTRUCTION WORKER CLASS ENDS (DEBUGGING)
 var levelChars = {
   ".": "empty", "#": "wall", "+": "lava",
