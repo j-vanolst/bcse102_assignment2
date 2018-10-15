@@ -112,10 +112,36 @@ var Coin = class Coin {
 
 Coin.prototype.size = new Vec(1, 1.2);
 
+//CONSTRUCTION WORKER CLASS BEGINS (CODE BREAKS)
+var conWorker = class conWorker {
+  constructor(pos, speed, reset) {
+    this.pos = pos
+    this.speed = speed
+    this.reset = reset
+  }
+
+  get type() { return "conWorker" }
+
+  static create(pos) {
+    return new conWorker(pos, new Vec(2, 0))
+  }
+}
+conWorker.prototype.size = new Vec(1, 2);
+conWorker.prototype.update = function(time, state) {
+  let newPos = this.pos.plus(this.speed.times(time));
+  if (!state.level.touches(newPos, this.size, "wall")) {
+    return new conWorker(newPos, this.speed, this.reset);
+  } else if (this.reset) {
+    return new conWorker(this.reset, this.speed, this.reset);
+  } else {
+    return new conWorker(this.pos, this.speed.times(-1));
+  }
+};
+//CONSTRUCTION WORKER CLASS ENDS (DEBUGGING)
 var levelChars = {
   ".": "empty", "#": "wall", "+": "lava",
   "@": Player, "o": Coin,
-  "=": Lava, "|": Lava, "v": Lava
+  "=": Lava, "|": Lava, "v": Lava, "w": conWorker
 };
 
 var simpleLevel = new Level(simpleLevelPlan);
