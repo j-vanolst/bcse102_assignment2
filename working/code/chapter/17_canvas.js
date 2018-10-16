@@ -80,26 +80,6 @@ otherSprites.src = "img/sprites.png";
 var conWorkerSprite = document.createElement("img")
 conWorkerSprite.src = "img/conWorker.png"
 
-// CanvasDisplay.prototype.drawBackground = function(level) {
-//   let {left, top, width, height} = this.viewport;
-//   let xStart = Math.floor(left);
-//   let xEnd = Math.ceil(left + width);
-//   let yStart = Math.floor(top);
-//   let yEnd = Math.ceil(top + height);
-//
-//   for (let y = yStart; y < yEnd; y++) {
-//     for (let x = xStart; x < xEnd; x++) {
-//       let tile = level.rows[y][x];
-//       if (tile == "empty") continue;
-//       let screenX = (x - left) * scale;
-//       let screenY = (y - top) * scale;
-//       let tileX = tile == "lava" ? scale : 0;
-//       this.cx.drawImage(otherSprites,
-//                         tileX,         0, scale, scale,
-//                         screenX, screenY, scale, scale);
-//     }
-//   }
-// };
 CanvasDisplay.prototype.drawBackground = function(level) {
   let {left, top, width, height} = this.viewport;
   let xStart = Math.floor(left);
@@ -120,6 +100,7 @@ CanvasDisplay.prototype.drawBackground = function(level) {
     }
   }
 };
+
 var playerSprites = document.createElement("img");
 playerSprites.src = "img/player.png";
 var playerXOverlap = 10;
@@ -169,8 +150,8 @@ CanvasDisplay.prototype.drawActors = function(actors) {
       else if (actor.type == "conWorker") {
         let tileX = (actor.type == "conWorker" ? 0 : 1) * scale;
         this.cx.drawImage(conWorkerSprite,
-                          tileX, 0, 20, 46,
-                          x,     y, 20, 46);
+                          tileX, 0, 20, 50,
+                          x,     y, 20, 50);
       }
   }
 };
