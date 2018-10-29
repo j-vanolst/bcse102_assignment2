@@ -77,9 +77,6 @@ CanvasDisplay.prototype.clearDisplay = function(status) {
 var otherSprites = document.createElement("img");
 otherSprites.src = "img/sprites.png";
 
-var conWorkerSprite = document.createElement("img")
-conWorkerSprite.src = "img/conWorker.png"
-
 CanvasDisplay.prototype.drawBackground = function(level) {
   let {left, top, width, height} = this.viewport;
   let xStart = Math.floor(left);
@@ -100,6 +97,9 @@ CanvasDisplay.prototype.drawBackground = function(level) {
     }
   }
 };
+
+var conWorkerSprite = document.createElement("img")
+conWorkerSprite.src = "img/conWorker.png"
 
 var playerSprites = document.createElement("img");
 playerSprites.src = "img/player.png";
