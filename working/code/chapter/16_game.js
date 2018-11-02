@@ -112,7 +112,7 @@ var Coin = class Coin {
 
 Coin.prototype.size = new Vec(1, 1.2);
 
-//CONSTRUCTION WORKER CLASS BEGINS (CODE BREAKS)
+//CONSTRUCTION WORKER CLASS BEGINS
 var conWorker = class conWorker {
   constructor(pos, speed, reset) {
     this.pos = pos
@@ -142,7 +142,7 @@ conWorker.prototype.collide = function(state) {
   countdown.setCountdown(180)
   return new State(state.level, state.actors, "lost");
 };
-//CONSTRUCTION WORKER CLASS ENDS (DEBUGGING)
+//CONSTRUCTION WORKER CLASS ENDS
 var levelChars = {
   ".": "empty", "#": "wall", "+": "lava",
   "@": Player, "o": Coin,
@@ -398,5 +398,15 @@ async function runGame(plans, Display, countdown) {
                                 Display, countdown);
     if (status == "won") level++;
   }
+  let gameInformation = document.getElementById('gameInformation')
+  let score = document.getElementById('score').innerText
+  
+  gameInformation.innerHTML = ''
+  let h1 = document.createElement('h1')
+  h1.innerText = "You've Won!"
+  gameInformation.appendChild(h1)
+  let h2 = document.createElement('h2')
+  h2.innerText = score
+  gameInformation.appendChild(h2)
   console.log("You've won!");
 }
